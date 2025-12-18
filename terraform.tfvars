@@ -27,7 +27,7 @@ origins = [
   #  S3 ORIGIN
   {
     origin_id   = "s3-origin"
-    domain_name = "my-bucket.s3.us-east-1.amazonaws.com"
+    domain_name = "cloudfront-test-spacelift.us-east-1.amazonaws.com"
     origin_type = "s3"
 
     s3_origin_config = {
@@ -115,7 +115,7 @@ origins = [
 default_cache_behavior = {
 allowed_methods        = ["GET", "HEAD", "OPTIONS"]
 cached_methods         = ["GET", "HEAD"]
-target_origin_id       = "vpc-origin"
+target_origin_id       = "s3-origin"
 viewer_protocol_policy = "redirect-to-https"
 
 query_string = true
